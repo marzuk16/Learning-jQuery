@@ -52,7 +52,7 @@
                             <label for="userName" class="form-label">User Name</label>
                             <input type="text" class="form-control" id="userName"
                                 aria-describedby="userNameHelp">
-                            <div id="userNameHelp" class="form-text">English letter & _ Allowed</div>
+                            <div id="userNameHelp" class="form-text">English letter number & _ Allowed</div>
                         </div>
 
                         <div class="mb-3">
@@ -64,12 +64,13 @@
 
                         <div class="mb-3">
                             <label for="password" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="password">
+                            <input type="password" class="form-control" id="password" aria-describedby="passwordHelp">
+                            <div id="passwordHelp" class="form-text">Ex: Password2@</div>
                         </div>
 
                         <div class="mb-3 form-check">
                             <input type="checkbox" class="form-check-input" id="tncCheck">
-                            <label class="form-check-label" for="tncCheck">Agree with terms & conditions</label>
+                            <label id="form-check-label-id" class="form-check-label" for="tncCheck">Agree with terms & conditions</label>
                         </div>
 
                         <button type="submit" class="btn btn-primary">Submit</button>
@@ -80,6 +81,7 @@
         </div>
     </div>
 
+    <script type="text/javascript" src="../js/utils/messages.js"></script>
     <script type="text/javascript" src="../js/utils/utils.js"></script>
     <script type="text/javascript" src="../js/validation/formValidator.js"></script>
 </body>
