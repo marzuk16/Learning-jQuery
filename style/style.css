@@ -1,0 +1,8 @@
+label.error{
+    color:crimson;
+    margin-top: 2px;
+    
+}
+input.error{
+    border-color: crimson;
+}

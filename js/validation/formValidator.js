@@ -33,6 +33,7 @@ $().ready(function(){
         else{
             console.log("---------------");
 
+            
             event.preventDefault();
         }
     });

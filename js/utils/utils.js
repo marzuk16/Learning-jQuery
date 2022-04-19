@@ -17,12 +17,12 @@ const isBengaliName = name => {
 
 const isOnlyBengaliDigits = text => {
     const pattern = /^[\u09E6-\u09EF]+$/;
-	return pattern.test(text);
+    return pattern.test(text);
 };
 
 const isOnlyEnglishDigits = text => {
     const pattern = /^[0-9]+$/;
-	return pattern.test(text);
+    return pattern.test(text);
 };
 
 const containingBanla = text => {
@@ -50,9 +50,23 @@ const isValiduserName = userName => {
     return pattern.test(userName);
 };
 
+const isChecked = () => $("#tncCheck").is(":checked");
+
 const ageCalculation = dob => {
     let date = dob.split("/");
     const formattedDOB = new Date(date[2], date[1] - 1, date[0]);
     let today = new Date();
     return Math.floor((today - formattedDOB) / (365.25 * 24 * 60 * 60 * 1000));
+};
+
+const togglePasswordVisibility = () => {
+    $("#togglePassword").click(function () {
+        if ($("#password").attr("type") === "password") {
+            $("#password").attr("type", "text");
+            $("#togglePassword").addClass("bi-eye");
+        } else {
+            $("#password").attr("type", "password");
+            $("#togglePassword").removeClass("bi-eye");
+        }
+    });
 };
