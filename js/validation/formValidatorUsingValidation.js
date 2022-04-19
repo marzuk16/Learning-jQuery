@@ -15,11 +15,24 @@ $(document).ready(function(){
             },
             userName: {
                 required: true,
+                minlength: 4,
+                maxlength: 10,
                 userNameChecker: true
             },
             email: {
                 required: true,
-                emailChecker: true
+                emailChecker: true,
+                /* remote: {
+                    // unique email check in DB
+                    url: "/user/find-by-email",
+                    type: "post",
+                    data: {
+                      username: function() {
+                        return $( "#username" ).val();
+                      },
+                      dataType: 'json'
+                    }
+                  } */
             },
             password: {
                 required: true,
@@ -81,6 +94,10 @@ $(document).ready(function(){
         invalidHandler: function(element){
             let validator =$("#toValidateForm").validate();
             console.log(validator.numberOfInvalids()); // it returns number of invalid fields
+            // validator.form(); // returns true if form is valid otherwise false
+            // validator.resetForm(); // resets the controlled form
+            // validator.element( "#myselect" ); // validates a single element, return true if it is valid, false otherwise.
+            // validator.destroy(); // After this point the #toValidateForm form is back to its original boring state.
         },
         submitHandler: function(e){
             alert("submit success!")
