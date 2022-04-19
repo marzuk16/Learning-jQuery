@@ -71,18 +71,41 @@
                         <div class="mb-3">
                             <label for="password" class="form-label">Password</label>
                             <div class="input-group">
-                                <span class="input-group-text"><i class="bi bi-eye-slash"
-                                    id="togglePassword" title="show password"></i></span>
-                                <input type="password" class="form-control" id="password"
+                                <input type="password" class="input-group form-control" id="password"
                                     aria-describedby="passwordHelp" name="password">
+                                <span class="input-group-text"><i class="bi bi-eye-slash" id="togglePassword"
+                                        title="show password"></i></span>
                                 <!-- <div id="passwordHelp" class="form-text">Ex: Password2@</div> -->
                             </div>
+                            <label for="password" class="error form-label" style="display: none;"></label>
+
                         </div>
 
                         <div class="mb-3 form-check">
-                            <label id="form-check-label-id" class="form-check-label" for="tncCheck">Agree with terms &
-                                conditions</label>
-                            <input type="checkbox" class="form-check-input" id="tncCheck" name="tncCheck"><br />
+                            <div>
+                                <label id="form-check-label-id" class="form-check-label" for="tncCheck">Agree with terms
+                                    &
+                                    conditions</label>
+                                <input type="checkbox" class="form-check-input" id="tncCheck" name="tncCheck">
+
+                            </div>
+                            <label for="tncCheck" class="error" style="display: none;"></label>
+
+                        </div>
+
+                        <div class="mb-3 form-check">
+                            <div>
+                                <div class="form-check">
+                                    <label class="form-check-label" for="flexRadioDefault1"> Male </label>
+                                    <input class="form-check-input" type="radio" value="" id="flexRadioDefault1" name="gender[]">
+                                  </div>
+                                  <div class="form-check">
+                                    <label class="form-check-label" for="flexRadioDefault2"> Female </label>
+                                    <input class="form-check-input" type="radio" value="" id="flexRadioDefault2" name="gender[]">
+                                  </div>
+
+                            </div>
+                            <label for="gender[]" class="error" style="display: none;"></label>
 
                         </div>
 
